@@ -1,0 +1,19 @@
+- t_today = Date.today
+= h1 = t_today.strftime("%b.%d(%a)")
+table.table.table-bordered
+  thred
+    tr
+      th.text-center colspan="6" 
+        | 202教室
+      th.text-center 
+        | 元自販機 
+      th.text-center
+        | 大教室前 
+  tbody
+    tr
+  - @student[0].each do |name|
+      td.text-center
+        =  name
+
+//= link_to '当番履歴' ,new_today_path, class: 'btn btn-primary'
+

@@ -1,0 +1,13 @@
+business_time:
+  beginning_of_workday: 9:00 am
+  end_of_workday: 5:00 pm
+  holidays:
+    - jan 9, 2023
+    - Jan 17, 2023
+    - Feb 15 , 2023
+  work_week:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
