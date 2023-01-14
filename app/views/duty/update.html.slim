@@ -1,0 +1,11 @@
+h1 = @startday.start
+h2  日数: = @days 
+= form_with(model: @day) do |form|
+
+  div
+    = form.label :開始日変更, style: "display: block"
+    = form.date_field :date
+
+  div
+    = form.submit
+= link_to "topに戻る", "/",class: 'btn btn-primary'

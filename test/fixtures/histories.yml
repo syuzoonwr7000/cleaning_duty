@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  room202: MyString
+  soto1: MyString
+  soto2: MyString
+  date: 2023-01-14
+
+two:
+  room202: MyString
+  soto1: MyString
+  soto2: MyString
+  date: 2023-01-14

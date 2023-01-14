@@ -1,0 +1,26 @@
+= form_with(model: @history) do |form|
+  - if @history.errors.any?
+    div style="color: red"
+      h2 = "#{pluralize(@history.errors.count, "error")} prohibited this history from being saved:"
+      ul
+        - @history.errors.each do |error|
+          li = error.full_message
+
+  div
+    = form.label :room202, style: "display: block"
+    = form.text_field :room202
+
+  div
+    = form.label :soto1, style: "display: block"
+    = form.text_field :soto1
+
+  div
+    = form.label :soto2, style: "display: block"
+    = form.text_field :soto2
+
+  div
+    = form.label :date, style: "display: block"
+    = form.date_field :date
+
+  div
+    = form.submit

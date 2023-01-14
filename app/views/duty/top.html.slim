@@ -1,5 +1,5 @@
 - t_today = Date.today
-= h1 = t_today.strftime("%b.%d(%a)")
+= h1 = t_today.strftime("%Y年%-m月%-d日")
 table.table.table-bordered
   thred
     tr
@@ -15,4 +15,4 @@ table.table.table-bordered
       td.text-center
         =  name
 
-//= button_to '一日戻る' ,action: 'create', class: 'btn btn-primary'
+= link_to '開始日変更' ,"/startday/1", class: 'btn btn-primary'

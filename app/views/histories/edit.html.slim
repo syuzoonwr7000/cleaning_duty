@@ -1,0 +1,10 @@
+h1 Editing history
+
+== render "form", history: @history
+
+br
+
+div
+  => link_to "Show this history", @history
+  '|
+  =< link_to "Back to histories", histories_path
