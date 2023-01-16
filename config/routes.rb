@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root  'duty#top'
   resources :histories
   get '/', to: "duty#top"
   get '/startday', to: "duty#edit"
