@@ -13,6 +13,20 @@ class HistoriesController < ApplicationController
   # GET /histories/new
   def new
     @history = History.new
+
+    @days = count_days 
+    @student = (1..24).each_slice(8).to_a
+    @student.rotate!(@days)
+    
+   if @days%3 == 0
+      @student.each_index do |i|
+        @student[i].rotate!(@days/3)
+      end
+    else
+      @student.each_index do |i|
+        @student[i].rotate!(@days/3)
+      end
+    end 
   end
 
   # GET /histories/1/edit
@@ -67,4 +81,11 @@ class HistoriesController < ApplicationController
     def history_params
       params.require(:history).permit(:room202, :soto1, :soto2, :date)
     end
+  
+  def count_days
+    start = Day.find(1).start
+    today = Date.today
+    days = (start..today).select{|d|d.workday?}
+    days.count
+  end
 end

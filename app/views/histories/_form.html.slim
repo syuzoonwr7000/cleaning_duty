@@ -7,20 +7,20 @@
           li = error.full_message
 
   div
-    = form.label :room202, style: "display: block"
-    = form.text_field :room202
+    = form.label :"202教室", style: "display: block"
+    = form.text_field :room202,value: @student[0][0..5] 
 
   div
-    = form.label :soto1, style: "display: block"
-    = form.text_field :soto1
+    = form.label :元自販機前, style: "display: block"
+    = form.text_field :soto1,value: @student[0][6]
 
   div
-    = form.label :soto2, style: "display: block"
-    = form.text_field :soto2
+    = form.label :大教室, style: "display: block"
+    = form.text_field :soto2,value: @student[0][7]
 
   div
-    = form.label :date, style: "display: block"
-    = form.date_field :date
+    = form.label :日付, style: "display: block"
+    = form.date_field :date,value: Date.today
 
   div
     = form.submit

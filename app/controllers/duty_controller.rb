@@ -17,7 +17,6 @@ class DutyController < ApplicationController
   end
 
   def edit
-    @startday = Day.find(1)
   end
   
   def new
