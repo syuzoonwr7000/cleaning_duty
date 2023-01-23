@@ -1,5 +1,8 @@
 div id="#{dom_id history}"
   p
+    strong 日付:
+    =< history.date
+  p
     strong 202教室:
     =< history.room202
   p
@@ -8,6 +11,3 @@ div id="#{dom_id history}"
   p
     strong 大教室:
     =< history.soto2
-  p
-    strong Date:
-    =< history.date

@@ -31,6 +31,22 @@ class HistoriesController < ApplicationController
 
   # GET /histories/1/edit
   def edit
+    @history = History.new
+
+    @days = count_days 
+    @student = (1..24).each_slice(8).to_a
+    @student.rotate!(@days)
+    
+   if @days%3 == 0
+      @student.each_index do |i|
+        @student[i].rotate!(@days/3)
+      end
+    else
+      @student.each_index do |i|
+        @student[i].rotate!(@days/3)
+      end
+    end 
+
   end
 
   # POST /histories or /histories.json
