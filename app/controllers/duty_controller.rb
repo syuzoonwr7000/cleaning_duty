@@ -4,16 +4,10 @@ class DutyController < ApplicationController
     @days = count_days 
     @student = (1..24).each_slice(8).to_a
     @student.rotate!(@days)
-    
-   if @days%3 == 0
-      @student.each_index do |i|
-        @student[i].rotate!(@days/3)
-      end
-    else
-      @student.each_index do |i|
-        @student[i].rotate!(@days/3)
-      end
-    end 
+
+    @student.each_index do |i|
+      @student[i].rotate!(@days/3)
+    end
   end
 
   def edit
